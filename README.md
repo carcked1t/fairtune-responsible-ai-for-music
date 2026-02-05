@@ -1,5 +1,6 @@
 # FairTune   
 ### Responsible AI for Music Discovery (Popularity Bias + Genre Diversity)
+Link:https://youtu.be/yL6JZBYV7kc
 
 FairTune is a Streamlit dashboard that audits a content-based music recommender for **popularity bias** and **genre filter bubbles**, then applies a lightweight **ε-greedy bandit re-ranking** strategy to improve fairness while maintaining relevance.
 
@@ -201,29 +202,6 @@ This shows the real tradeoff:
 - But can slightly reduce relevance
 
 
-##  Project Structure
-```text
-fairtune-resp-ai-for-music/
-│
-├── app/
-│ └── streamlit_app.py # Streamlit UI + plots
-│
-├── data/
-│ └── tracks.csv # Input dataset
-│
-├── src/
-│ ├── preprocess.py # Cleaning + schema normalization
-│ ├── data_loader.py # Loads dataset from /data
-│ ├── baseline_content.py # Baseline recommender
-│ ├── reranker_bandit.py # ε-greedy fairness reranker
-│ ├── metrics.py # Gini, entropy, long-tail exposure
-│ ├── evaluation.py # Computes metrics for a playlist
-│ └── config.py # Constants (if used)
-│
-├── requirements.txt
-└── README.md
-```
-
 
 ##  How to Run
 
@@ -262,3 +240,26 @@ Multi-objective optimization instead of ε-greedy
 FairTune is a practical demo of how recommender systems can be audited and improved for responsible AI goals using transparent fairness metrics, controllable exploration, lightweight re-ranking.
 
 It is designed for interpretability and experimentation rather than black-box modeling.
+
+##  Project Structure
+```text
+fairtune-resp-ai-for-music/
+│
+├── app/
+│ └── streamlit_app.py # Streamlit UI + plots
+│
+├── data/
+│ └── tracks.csv # Input dataset
+│
+├── src/
+│ ├── preprocess.py # Cleaning + schema normalization
+│ ├── data_loader.py # Loads dataset from /data
+│ ├── baseline_content.py # Baseline recommender
+│ ├── reranker_bandit.py # ε-greedy fairness reranker
+│ ├── metrics.py # Gini, entropy, long-tail exposure
+│ ├── evaluation.py # Computes metrics for a playlist
+│ └── config.py # Constants (if used)
+│
+├── requirements.txt
+└── README.md
+```
