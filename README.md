@@ -1,4 +1,4 @@
-# FairTune 🎧  
+# FairTune   
 ### Responsible AI for Music Discovery (Popularity Bias + Genre Diversity)
 
 FairTune is a Streamlit dashboard that audits a content-based music recommender for **popularity bias** and **genre filter bubbles**, then applies a lightweight **ε-greedy bandit re-ranking** strategy to improve fairness while maintaining relevance.
@@ -84,7 +84,6 @@ The system is considered more responsible if it:
 
 FairTune compares Baseline vs FairTune using three fairness metrics:
 
----
 
 ### 1) Popularity Gini (↓ lower is better)
 **What it measures:**  
@@ -203,7 +202,7 @@ This shows the real tradeoff:
 
 
 ##  Project Structure
-
+```text
 fairtune-resp-ai-for-music/
 │
 ├── app/
